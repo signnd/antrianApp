@@ -14,6 +14,7 @@ class QueueController extends Controller
 {
     public function index()
     {
+        // halaman index, menampilkan waktu dan nomor antrian terakhir
         $today = Carbon::today()->toDateString();
         $queue = Queue::where('date', $today)->latest()->first();
         $currentDateTime = Carbon::now();
@@ -23,6 +24,7 @@ class QueueController extends Controller
 
     public function generate()
     {
+        // mencetak nomor antrean berdasarkan nomor terakhir di hari tersebut
         $today = Carbon::today()->toDateString();
         $lastQueue = Queue::where('date', $today)->latest()->first();
         $newNumber = $lastQueue ? $lastQueue->number + 1 : 1;

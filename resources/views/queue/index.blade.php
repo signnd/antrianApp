@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Antrian Farmasi</title>
+    <!-- styling halaman utama -->
     <style>
     .btn {
         display: inline-block;
@@ -16,8 +17,9 @@
     .btn:hover {
         background-color: #0056b3;
     }
-    </style>n
+    </style>
 
+    <!-- QZ Tray untuk komunikasi dengan printer -->
     <script src="{{ asset('js/qz-tray.js') }}"></script>
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
     <script>
@@ -43,6 +45,10 @@
             });
         }
 
+        // saat tombol ambil antrian diklik, langsung ke route 'queue.generate'
+        // dan mencetak nomor antrian yang dihasilkan pada route 'queue.print'
+        // (kalau bisa browser tidak perlu mengarah ke halaman queue.print saat cetak, 
+        // tetapi langsung refresh halaman ini untuk menampilkan nomor antrean terakhir)
         $(document).ready(function() {
             $('.btn').click(function(e) {
                 e.preventDefault();

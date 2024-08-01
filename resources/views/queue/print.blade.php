@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Print Antrian Farmasi</title>
+    <!-- styling halaman print -->
     <style>
         html {
             font-family: Calibri, sans-serif;
