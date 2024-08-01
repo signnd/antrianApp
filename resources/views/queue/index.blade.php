@@ -48,7 +48,7 @@
         // saat tombol ambil antrian diklik, langsung ke route 'queue.generate'
         // dan mencetak nomor antrian yang dihasilkan pada route 'queue.print'
         // (kalau bisa browser tidak perlu mengarah ke halaman queue.print saat cetak, 
-        // tetapi langsung refresh halaman ini untuk menampilkan nomor antrean terakhir)
+        // tetapi langsung refresh halaman index untuk menampilkan nomor antrean terakhir)
         $(document).ready(function() {
             $('.btn').click(function(e) {
                 e.preventDefault();
